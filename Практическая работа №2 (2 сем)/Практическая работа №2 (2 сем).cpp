@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <iomanip>
 #include <chrono>
 #include <string>
@@ -676,6 +676,10 @@ void workWithList() {
 			int k;
 			cout << "Введите N (размер списка):" << '\n';
 			cin >> k;
+			while (k < 0) {
+				cout << "Размер списка не может быть отрицательным! Введитте новое значени:" << '\n';
+				cin >> k;
+			}
 			List* list = createListlengthN(k);
 			cout << "Список создан" << '\n' << '\n';
 			system("pause");
@@ -721,6 +725,14 @@ void workWithList() {
 					break;
 				case 3:
 					system("cls");
+					if (listlength(list) == 0) {
+						cout << "Список пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
 					int number2;
 					cout << "Введите порядковый номер элемента для удаления: (от 1 до " << listlength(list) << ')' << '\n';
 					cin >> number2;
@@ -747,6 +759,14 @@ void workWithList() {
 					break;
 				case 4:
 					system("cls");
+					if (listlength(list) == 0) {
+						cout << "Список пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
 					int number3;
 					cout << "Введите значение элемента, который вы хотите удалить:" << '\n';
 					cin >> number3;
@@ -769,6 +789,14 @@ void workWithList() {
 					break;
 				case 5:
 					system("cls");
+					if (listlength(list) == 0) {
+						cout << "Список пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
 					int number4, number5;
 					cout << "Введите порядковые номера тех элементов, которые вы хотите поменять местами, допустимые значения: 1 - " << listlength(list) << ')' << '\n';
 					cin >> number4;
@@ -786,6 +814,14 @@ void workWithList() {
 					break;
 				case 6:
 					system("cls");
+					if (listlength(list) == 0) {
+						cout << "Список пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
 					int number6;
 					cout << "Введите номер элемента для получения: (от 1 до " << listlength(list) << ')' << '\n';
 					cin >> number6;
@@ -802,6 +838,14 @@ void workWithList() {
 					break;
 				case 7:
 					system("cls");
+					if (listlength(list) == 0) {
+						cout << "Список пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
 					int number7;
 					cout << "Введите значение элемента для получения:" << '\n';
 					cin >> number7;
@@ -832,6 +876,14 @@ void workWithList() {
 				}
 				case 9:
 					system("cls");
+					if (listlength(list) == 0) {
+						cout << "Список пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
 					int number8;
 					int value2;
 					cout << "Введите номер элемента, который вы хотите получить: ";
@@ -911,6 +963,14 @@ void workWithList() {
 					break;
 				case 3:
 					system("cls");
+					if (listlength(list1) == 0) {
+						cout << "Список пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
 					int number1;
 					cout << "Введите порядковый номер элемента для удаления: (от 1 до " << listlength(list1) << ')' << '\n';
 					cin >> number1;
@@ -937,6 +997,14 @@ void workWithList() {
 					break;
 				case 4:
 					system("cls");
+					if (listlength(list1) == 0) {
+						cout << "Список пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
 					int number2;
 					cout << "Введите значение элемента, который вы хотите удалить:" << '\n';
 					cin >> number2;
@@ -959,6 +1027,14 @@ void workWithList() {
 					break;
 				case 5:
 					system("cls");
+					if (listlength(list1) == 0) {
+						cout << "Список пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
 					int number3, number4;
 					cout << "Введите порядковые номера тех элементов, которые вы хотите поменять местами, допустимые значения: 1 - " << listlength(list1) << ')' << '\n';
 					cin >> number3;
@@ -976,6 +1052,14 @@ void workWithList() {
 					break;
 				case 6:
 					system("cls");
+					if (listlength(list1) == 0) {
+						cout << "Список пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
 					int number5;
 					cout << "Введите номер элемента для получения: (от 1 до " << listlength(list1) << ')' << '\n';
 					cin >> number5;
@@ -992,6 +1076,14 @@ void workWithList() {
 					break;
 				case 7:
 					system("cls");
+					if (listlength(list1) == 0) {
+						cout << "Список пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
 					int number6;
 					cout << "Введите значение элемента для получения:" << '\n';
 					cin >> number6;
@@ -1022,6 +1114,14 @@ void workWithList() {
 				}
 				case 9:
 					system("cls");
+					if (listlength(list1) == 0) {
+						cout << "Список пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
 					int number8;
 					int value3;
 					cout << "Введите номер элемента, который вы хотите получить: ";
@@ -1069,6 +1169,10 @@ void workWithArray() {
 			int length;
 			cout << "Введите N (размер массива):" << '\n';
 			cin >> length;
+			while (length < 0) {
+				cout << "Размер массива не может быть отрицательным! Введитте новое значени:" << '\n';
+				cin >> length;
+			}
 			int* array = createArrayLengthN(length);
 			cout << "Массив создан" << '\n' << '\n';
 			system("pause");
@@ -1096,6 +1200,7 @@ void workWithArray() {
 					system("pause");
 					system("cls");
 					break;
+
 				case 2:
 					system("cls");
 					int number;
@@ -1112,15 +1217,20 @@ void workWithArray() {
 					system("pause");
 					system("cls");
 					break;
+
 				case 3:
 					system("cls");
-					int number1;
+
 					if (length == 0) {
 						cout << "Массив пуст!" << '\n';
-						system("pause");
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
 						system("cls");
 						break;
 					}
+
+					int number1;
 					cout << "Введите номер элемента для удаления: (от 1 до " << length << ')' << '\n';
 					cin >> number1;
 					while (number1 > length || number1 < 1) {
@@ -1131,8 +1241,19 @@ void workWithArray() {
 					system("pause");
 					system("cls");
 					break;
+
 				case 4:
 					system("cls");
+
+					if (length == 0) {
+						cout << "Массив пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
+
 					int number2;
 					cout << "Введите значение элемента, который вы хотите удалить:" << '\n';
 					cin >> number2;
@@ -1140,10 +1261,21 @@ void workWithArray() {
 					system("pause");
 					system("cls");
 					break;
+
 				case 5:
 					system("cls");
+
+					if (length == 0) {
+						cout << "Массив пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
+
 					int number4, number5;
-					cout << "Введите порядковые номера тех элементов, которые вы хотите поменять местами, допустимые значения:" << '\n';
+					cout << "Введите порядковые номера тех элементов, которые вы хотите поменять местами, допустимые значения: 1 - " << length << ')' << '\n';
 					cin >> number4;
 					cout << '\n';
 					cin >> number5;
@@ -1157,8 +1289,19 @@ void workWithArray() {
 					system("pause");
 					system("cls");
 					break;
+
 				case 6:
 					system("cls");
+
+					if (length == 0) {
+						cout << "Массив пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
+
 					int number6;
 					cout << "Введите номер элемента для получения: (от 1 до " << length << ')' << '\n';
 					cin >> number6;
@@ -1172,8 +1315,19 @@ void workWithArray() {
 					system("pause");
 					system("cls");
 					break;
+
 				case 7:
 					system("cls");
+
+					if (length == 0) {
+						cout << "Массив пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
+
 					int number7;
 					cout << "Введите значение элемента для получения:" << '\n';
 					cin >> number7;
@@ -1198,8 +1352,19 @@ void workWithArray() {
 					system("cls");
 					break;
 				}
+
 				case 9:
 					system("cls");
+
+					if (length == 0) {
+						cout << "Массив пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
+
 					int number8;
 					int value1;
 					cout << "Введите номер элемента, который вы хотите получить: ";
@@ -1230,6 +1395,7 @@ void workWithArray() {
 			delete[] array;
 			break;
 		}
+
 		case 2: {
 			int o;
 			system("cls");
@@ -1262,6 +1428,7 @@ void workWithArray() {
 					system("pause");
 					system("cls");
 					break;
+
 				case 2:
 					system("cls");
 					int number;
@@ -1278,15 +1445,20 @@ void workWithArray() {
 					system("pause");
 					system("cls");
 					break;
+
 				case 3:
 					system("cls");
-					int number1;
+
 					if (length1 == 0) {
 						cout << "Массив пуст!" << '\n';
-						system("pause");
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
 						system("cls");
 						break;
 					}
+
+					int number1;
 					cout << "Введите номер элемента для удаления: (от 1 до " << length1 << ')' << '\n';
 					cin >> number1;
 					while (number1 > length1 || number1 < 1) {
@@ -1297,8 +1469,19 @@ void workWithArray() {
 					system("pause");
 					system("cls");
 					break;
+
 				case 4:
 					system("cls");
+
+					if (length1 == 0) {
+						cout << "Массив пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
+
 					int number2;
 					cout << "Введите значение элемента, который вы хотите удалить:" << '\n';
 					cin >> number2;
@@ -1306,10 +1489,21 @@ void workWithArray() {
 					system("pause");
 					system("cls");
 					break;
+
 				case 5:
 					system("cls");
+
+					if (length1 == 0) {
+						cout << "Массив пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
+
 					int number4, number5;
-					cout << "Введите порядковые номера тех элементов, которые вы хотите поменять местами, допустимые значения:" << '\n';
+					cout << "Введите порядковые номера тех элементов, которые вы хотите поменять местами, допустимые значения: 1 - " << length1 << ')' << '\n';
 					cin >> number4;
 					cout << '\n';
 					cin >> number5;
@@ -1323,8 +1517,19 @@ void workWithArray() {
 					system("pause");
 					system("cls");
 					break;
+
 				case 6:
 					system("cls");
+
+					if (length1 == 0) {
+						cout << "Массив пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
+
 					int number6;
 					cout << "Введите номер элемента для получения: (от 1 до " << length1 << ')' << '\n';
 					cin >> number6;
@@ -1338,8 +1543,19 @@ void workWithArray() {
 					system("pause");
 					system("cls");
 					break;
+
 				case 7:
 					system("cls");
+
+					if (length1 == 0) {
+						cout << "Массив пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
+
 					int number7;
 					cout << "Введите значение элемента для получения:" << '\n';
 					cin >> number7;
@@ -1347,6 +1563,7 @@ void workWithArray() {
 					system("pause");
 					system("cls");
 					break;
+
 				case 8: {
 					system("cls");
 					auto start1 = high_resolution_clock::now();
@@ -1363,8 +1580,19 @@ void workWithArray() {
 					system("cls");
 					break;
 				}
+
 				case 9:
 					system("cls");
+
+					if (length1 == 0) {
+						cout << "Массив пуст!" << '\n';
+						cin.ignore(10000, '\n');
+						cout << "Нажмите Enter для продолжения...";
+						cin.get();
+						system("cls");
+						break;
+					}
+
 					int number8;
 					int value1;
 					cout << "Введите номер элемента, который вы хотите получить: ";
